@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    tools:context=".URL_toolbar_layout"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/web_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@mipmap/back_icon"
+            android:layout_marginRight="15dp"/>
+        <ImageView
+            android:id="@+id/web_forward"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@mipmap/bar_forward_icon"
+            android:layout_marginRight="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_web_bg">
+                <EditText
+                    android:id="@+id/et_urlBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="www.baidu.com"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/bar_btn_view"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="2dp"
+            android:src="@mipmap/bar_view_icon"
+            android:layout_marginRight="15dp"/>
+        <ImageView
+            android:id="@+id/bar_btn_menu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/menu_icon_1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
