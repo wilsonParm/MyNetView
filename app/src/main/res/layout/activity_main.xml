@@ -19,7 +19,6 @@
             android:layout_weight="1"/>
 
         <include
-            android:layout_below="@id/webView"
             android:id="@+id/URL_toolbar"
             layout="@layout/url_toolbar_layout" />
 

@@ -1,7 +1,5 @@
 package com.example.mynetview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -13,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText urlBox;
@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     Button refresh,cancel;
     ImageView webBack, webForward;
     ProgressBar progress;
+
+    private final int webView_zoomIn = 0;
+    private final int webView_zoomOut = 1;
+
+    private int isZoom = 1;  //是否缩放
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         urlBox.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                //when enter is pressed in edittext, start loading the page
+                //when enter is pressed in editText, start loading the page
                 if (keyCode == KeyEvent.KEYCODE_ENTER) {
 //                    String url = urlBox.getText().toString();
                     String url = "http://www.baidu.com";
@@ -74,9 +79,13 @@ public class MainActivity extends AppCompatActivity {
                         webView.goForward();
                     }
                     break;
+                case R.id.bar_btn_allWebView:
+
+                    break;
             }
         }
     }
+
     public class CustomWebViewClient extends WebViewClient
     {
         @Override
